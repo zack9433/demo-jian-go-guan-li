@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "website"
   ],
   "config": {
     "commitizen": {
@@ -18,23 +18,13 @@
   "scripts": {
     "precommit": "lint-staged",
     "commit": "git-cz",
-    "commitmsg": "commitlint -e $GIT_PARAMS",
-    "server:start": "NODE_ENV=development npm-run-all 'lerna:exec -- --scope @thingspro/{1} -- npm start' --",
-    "server:build": "NODE_ENV=production npm-run-all 'lerna:exec -- --scope @thingspro/{1} -- npm run build' --",
-    "lerna:exec": "lerna exec",
-    "start": "run-p start:ng start:mock:edge",
-    "lint": "npm run affected:lint -- --base=$(git-current-branch)",
-    "format": "./node_modules/.bin/nx format:write",
-    "format:write": "./node_modules/.bin/nx format:write",
-    "format:check": "./node_modules/.bin/nx format:check"
+    "commitmsg": "commitlint -e $GIT_PARAMS"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.0.0",
     "@commitlint/config-conventional": "^7.0.1",
     "commitizen": "^2.10.1",
     "husky": "^0.14.3",
-    "lerna": "^3.0.0-rc.0",
-    "lerna-changelog": "^0.8.0",
     "lint-staged": "^7.2.0",
     "prettier": "1.14.0"
   },
