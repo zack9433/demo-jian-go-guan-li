@@ -1,0 +1,36 @@
+{
+  "version": "independent",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "changelog": {
+    "repo": "zack9433/demo-jian-go-guan-li",
+    "labels": {
+      "tag: new feature": ":rocket: New Feature",
+      "tag: breaking change": ":boom: Breaking Change",
+      "tag: bug fix": ":bug: Bug Fix",
+      "tag: enhancement": ":nail_care: Enhancement",
+      "tag: documentation": ":memo: Documentation",
+      "tag: internal": ":house: Internal"
+    }
+  },
+  "command": {
+    "publish": {
+      "message": "chore(release): publish",
+      "allowBranch": "master",
+      "ignoreChanges": [
+        "*.md",
+        "package.json",
+        ".*",
+        "dist/*",
+        "node_modules/*",
+        "*.yml",
+        "debian/*",
+        ".docker/*",
+        "scripts/*",
+        "Makefile",
+        "nodemon.json"
+      ]
+    }
+  },
+  "packages": ["packages/*"]
+}
