@@ -6,5 +6,5 @@ if [ -n "$RELEASE_TAG" ]
 then
   echo "Prepare to release version ${RELEASE_TAG}"
   yarn --cwd ./website version ${RELEASE_TAG}
-  GIT_USER="${GH_NAME}" yarn --cwd ./website publish-gh-pages
+  GIT_USER="${GH_NAME}" CURRENT_BRANCH=master yarn --cwd ./website publish-gh-pages
 fi
