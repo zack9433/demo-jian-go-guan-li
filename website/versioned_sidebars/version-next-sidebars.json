@@ -1,0 +1,10 @@
+{
+  "version-next-docs": {
+    "Docusaurus": ["version-next-doc1"],
+    "First Category": ["version-next-doc2"],
+    "Second Category": ["version-next-doc3"]
+  },
+  "version-next-docs-other": {
+    "First Category": ["version-next-doc4", "version-next-doc5"]
+  }
+}
