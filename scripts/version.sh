@@ -1,5 +1,9 @@
 #!/bin/bash
 
-LATEST_TAG=$(git describe --abbrev=0)
+RELEASE_TAG=$(yarn release --dry-run | grep "next release version is" | sed 's/.* //')
 
-yarn version ${LATEST_TAG}
+if [ -n "$RELEASE_TAG" ]
+then
+  yarn version ${RELEASE_TAG}
+  yarn --cwd ./website publish-gh-pages
+fi

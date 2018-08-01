@@ -7,11 +7,13 @@ notifications:
   email: false
 node_js:
   - '10'
+env:
+  - GIT_USER=zack9433
 script:
-  - yarn --cwd ./website build
+  - ./scripts/version.sh
 
 after_success:
   - yarn travis-deploy-once "yarn release"
 branches:
-  except:
-    - /^v\d+\.\d+\.\d+$/
+  only:
+    - master

@@ -1,7 +1,9 @@
 {
   "name": "developer-docs-site",
-  "version": "0.0.1",
   "description": "demo",
+  "author": "Zack Yang <zack9433@gmail.com>",
+  "repository": "git@github.com:zack9433/demo-jian-go-guan-li.git",
+  "license": "MIT",
   "scripts": {
     "examples": "docusaurus-examples",
     "start": "docusaurus-start",

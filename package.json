@@ -19,8 +19,7 @@
     "precommit": "lint-staged",
     "commit": "git-cz",
     "commitmsg": "commitlint -e $GIT_PARAMS",
-    "pub": "",
-    "release": "semantic-release --dry-run",
+    "release": "semantic-release",
     "travis-deploy-once": "travis-deploy-once"
   },
   "devDependencies": {
