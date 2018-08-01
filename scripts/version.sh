@@ -1,9 +1,9 @@
 #!/bin/bash
 
-RELEASE_TAG=$(yarn release --dry-run | grep "next release version is" | sed 's/.* //')
+RELEASE_TAG=$(npm run release --dry-run | grep "next release version is" | sed 's/.* //')
 
 if [ -n "$RELEASE_TAG" ]
 then
-  yarn version ${RELEASE_TAG}
-  yarn --cwd ./website publish-gh-pages
+  npm run version ${RELEASE_TAG} --prefix ./website
+  npm run publish-gh-pages --prefix ./website
 fi
