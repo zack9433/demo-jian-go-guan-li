@@ -7,14 +7,12 @@ notifications:
   email: false
 node_js:
   - '10'
-script:
-  - git config --global user.name "${GH_NAME}"
-  - git config --global user.email "${GH_EMAIL}"
-  - echo "machine github.com login ${GH_NAME} password ${GH_TOKEN}" > ~/.netrc
-  - ./scripts/version.sh
-
-after_success:
-  - yarn travis-deploy-once "yarn release"
-branches:
-  only:
-    - master
+deploy:
+  - provider: script
+    script: bash scripts/version.sh
+    on:
+      branch: release/*
+  - provider: script
+    script: bash scripts/publish.sh
+    on:
+      branch: master
