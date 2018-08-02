@@ -1,0 +1,5 @@
+{
+  "version-1.0.0-docs": {
+    "ThingsPro Edge": ["version-1.0.0-sdk", "version-1.0.0-oapi"]
+  }
+}
