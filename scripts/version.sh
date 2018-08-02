@@ -24,7 +24,7 @@ if [ -n "$RELEASE_TAG" ]
 then
   echo "Prepare to release version ${RELEASE_TAG}"
   yarn --cwd ./website run version ${RELEASE_TAG}
-  setup_git
+  # setup_git
   commit_version_file
   upload_files
   # GIT_USER="${GH_NAME}" CURRENT_BRANCH=master yarn --cwd ./website publish-gh-pages
