@@ -14,7 +14,7 @@ deploy:
   - provider: script
     script: bash scripts/version.sh
     on:
-      branch: release/*
+      branch: /release\/*/
   - provider: script
     script: bash scripts/publish.sh
     on:
