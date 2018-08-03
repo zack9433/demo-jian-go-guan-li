@@ -20,7 +20,7 @@
     "commit": "git-cz",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "dotenv": "dotenv",
-    "create:version": "./scripts/version.sh",
+    "create:version": "yarn --cwd ./website run version",
     "release": "semantic-release",
     "travis-deploy-once": "travis-deploy-once"
   },
